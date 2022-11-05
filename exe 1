@@ -1,0 +1,9 @@
+
+def calcular_area_trapezio(basemaior,basemenor,altura):
+    areadotrapezio= ((basemaior+basemenor)*altura)/2
+    print (f"\n A área do trapézio é {areadotrapezio}")
+    
+basemaior=float(input("\n Digite a medida da Base maior do trapézio : "))
+basemenor=float(input(" Digite a medida da Base menor do trapézio : "))
+altura=float(input(" Digite a medida da Altura do trapézio :  "))
+calcular_area_trapezio(basemaior,basemenor,altura)
