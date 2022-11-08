@@ -17,8 +17,11 @@ def saida(horas,minutos):
     
     if(minutos < 10):
         minutos = (f" {minutos:02}")
+        
+    if (horas==0):
+        print(f" {horas+12} : {minutos} {A}")
  
-    if(horas < 12):
+    if(horas < 12 and horas >=1):
         print(f" {horas} : {minutos} {A}")
         
     if(horas==12):
