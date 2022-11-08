@@ -1,9 +1,8 @@
-
 print("\nConversor de formato de horas 24h para 12h.")
 
 
-horas = int(input("\nDigite a(s) hora(s): "))
-minutos = int(input("Digite o(s) minuto(s): "))
+horas = int(input("\n Digite a(s) hora(s): "))
+minutos = int(input(" Digite o(s) minuto(s): "))
 
 A="A.M"
 P="P.M"
@@ -14,23 +13,27 @@ def conversao(horas):
 
 def saida(horas,minutos):
     
-    print("\nHorário Convertido: ")
+    print("\n Horário Convertido: ")
     
     if(minutos < 10):
-        minutos = (f"0{minutos}")
+        minutos = (f" {minutos:02}")
+ 
+    if(horas < 12):
+        print(f" {horas} : {minutos} {A}")
+        
+    if(horas==12):
+        print(f" {horas} : {minutos} {P}")
     
-    if(horas <= 12):
-        print(horas,":",minutos, A)
-    else:
-        print(conversao(horas),":", minutos, P)
+    if(horas>12):
+        print(f" {conversao(horas)} : {minutos} {P}")
 
 saida(horas, minutos)
 
 
 while True:
-   horas = int(input("\nDigite um valor negativo para sair  ou  Digite a(s) hora(s): "))
+   horas = int(input("\n Digite um valor negativo para sair  ou  Digite a(s) hora(s): "))
    if horas < 0:
     break
 
-   minutos = int(input("Digite o(s) minuto(s): "))
+   minutos = int(input(" Digite o(s) minuto(s): "))
    saida(horas,minutos)
